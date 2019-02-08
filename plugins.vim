@@ -19,6 +19,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 " Plug 'w0rp/ale'
 
 " Initialize plugin system

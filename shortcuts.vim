@@ -15,8 +15,8 @@ map <Leader>fq :q!<CR>
 map <Leader>fzf :Files<CR>
 
 " Shortcuts for vertical/horizontal split
-map <Leader>vs :vsplit<CR>
-map <Leader>hs :split<CR>
+map <Leader>vs :vsplit
+map <Leader>hs :split
 
 " Shortcuts to move windows 
 " map <Leader>;h <C-w>h
