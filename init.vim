@@ -35,6 +35,10 @@ set expandtab
 " Turn off highlighted search
 set nohlsearch
 
+" More natural window-splitting behavior
+set splitright
+set splitbelow
+
 
 
 " ----------------------------------------------------------------------------
