@@ -19,7 +19,7 @@ map <Leader>vs :vsplit<CR>
 map <Leader>hs :split<CR>
 
 " Shortcuts to move windows 
-map <Leader>;w <C-w>k
-map <Leader>;a <C-w>h
-map <Leader>;s <C-w>j
-map <Leader>;d <C-w>l
+" map <Leader>;h <C-w>h
+" map <Leader>;j <C-w>j
+" map <Leader>;k <C-w>k
+" map <Leader>;l <C-w>l
