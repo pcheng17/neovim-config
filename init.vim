@@ -16,8 +16,11 @@ nnoremap <Space> <nop>
 " ----------------------------------------------------------------------------
 " Basic settings 
 " ----------------------------------------------------------------------------
-if (has("termguicolors"))
-    set termguicolors
+" Only set termguicolors if not on Mac (colors look terrible)
+if !has('macunix')
+	if (has("termguicolors"))
+    	set termguicolors
+	end
 end
 
 " Initialize theme 
