@@ -47,4 +47,5 @@ set splitbelow
 " ----------------------------------------------------------------------------
 " Load other specific settings
 " ----------------------------------------------------------------------------
+source ~/neovim-config/a.vim
 source ~/neovim-config/shortcuts.vim

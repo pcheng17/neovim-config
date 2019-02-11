@@ -3,20 +3,31 @@
 " ----------------------------------------------------------------------------
 
 " Shortcut for re-sourcing init.vim
-map <Leader>rld :source ~/neovim-config/init.vim<CR>
+nmap <Leader>rld :source ~/neovim-config/init.vim<CR>
 
 " Shortcuts for saving and quiting
-map <Leader>fs :w<CR> 
-map <Leader>sq :wq<CR>
-map <Leader>qq :q<CR>
-map <Leader>fq :q!<CR>
+nmap <Leader>fs :w<CR> 
+nmap <Leader>sq :wq<CR>
+nmap <Leader>qq :q<CR>
+nmap <Leader>fq :q!<CR>
 
 " Shortcut for fuzzy finder
-map <Leader>fzf :Files<CR>
+nmap <Leader>fzf :Files<CR>
 
 " Shortcuts for vertical/horizontal split
-map <Leader>vs :vsplit
-map <Leader>hs :split
+nmap <Leader>vs :vsplit
+nmap <Leader>hs :split
+
+" Fast navigation
+nnoremap H 10h
+nnoremap J 10j
+nnoremap K 10k
+nnoremap L 10l
+vnoremap H 10h
+vnoremap J 10j
+vnoremap K 10k
+vnoremap L 10l
+
 
 " Shortcuts to move windows 
 " map <Leader>;h <C-w>h
