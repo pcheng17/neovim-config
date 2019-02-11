@@ -20,6 +20,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'jaxbot/semantic-highlight.vim'
 " Plug 'w0rp/ale'
 
 " Initialize plugin system
