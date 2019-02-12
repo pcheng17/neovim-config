@@ -28,6 +28,8 @@ vnoremap J 10j
 vnoremap K 10k
 vnoremap L 10l
 
+" Turn off highlighting
+nmap <Leader>noh :noh<CR>
 
 " Shortcuts to move windows 
 " map <Leader>;h <C-w>h

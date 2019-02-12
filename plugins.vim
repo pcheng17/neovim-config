@@ -20,10 +20,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
-" Plug 'jaxbot/semantic-highlight.vim'
+Plug 'bfrg/vim-cpp-modern'
 " Plug 'w0rp/ale'
+
+" SnipMate
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()

@@ -35,12 +35,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Turn off highlighted search
-set nohlsearch
-
 " More natural window-splitting behavior
 set splitright
 set splitbelow
+
+" Yank to clipboard
+" set clipboard+=unnamedplus
 
 
 
