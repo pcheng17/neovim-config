@@ -28,6 +28,10 @@ vnoremap J 10j
 vnoremap K 10k
 vnoremap L 10l
 
+" grep
+nmap <Leader>gr :Grepper<CR>
+vmap <Leader>gr :Grepper<CR>
+
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
 

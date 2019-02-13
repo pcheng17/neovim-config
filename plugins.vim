@@ -21,6 +21,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'mhinz/vim-grepper'
 " Plug 'w0rp/ale'
 
 " SnipMate
