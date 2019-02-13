@@ -30,5 +30,8 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
+" Latex
+Plug 'lervag/vimtex'
+
 " Initialize plugin system
 call plug#end()
