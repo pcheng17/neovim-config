@@ -49,3 +49,4 @@ set splitbelow
 " ----------------------------------------------------------------------------
 source ~/neovim-config/a.vim
 source ~/neovim-config/shortcuts.vim
+source ~/neovim-config/tex.vim

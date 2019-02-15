@@ -35,8 +35,8 @@ vmap <Leader>gr :Grepper<CR>
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
 
-" Shortcuts to move windows 
-" map <Leader>;h <C-w>h
-" map <Leader>;j <C-w>j
-" map <Leader>;k <C-w>k
-" map <Leader>;l <C-w>l
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
