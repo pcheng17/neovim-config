@@ -2,6 +2,9 @@
 
 Peter's neovim configurations. Relies on vim_plug, which is included in this repo. 
 
+## Todo List
+* Add functionality to detect vim/neovim
+
 ## Commands to know
 
 ### From `a.vim`:
