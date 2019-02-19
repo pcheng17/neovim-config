@@ -28,6 +28,11 @@ vnoremap J 10j
 vnoremap K 10k
 vnoremap L 10l
 
+" Save"
+imap <C-s> <ESC>:w<CR>
+nmap <C-s> :w<CR>
+vmap <C-s> <ESC>:w<CR>
+
 " grep
 nmap <Leader>gr :Grepper<CR>
 vmap <Leader>gr :Grepper<CR>
@@ -36,7 +41,7 @@ vmap <Leader>gr :Grepper<CR>
 nmap <Leader>noh :noh<CR>
 
 " Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" map <C-h> <C-w>h
+" map <C-j> <C-w>j
+" map <C-k> <C-w>k
+" map <C-l> <C-w>l

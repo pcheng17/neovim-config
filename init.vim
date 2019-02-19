@@ -39,6 +39,9 @@ set expandtab
 set splitright
 set splitbelow
 
+" Allow mouse usage
+set mouse=a
+
 " Yank to clipboard
 " set clipboard+=unnamedplus
 
