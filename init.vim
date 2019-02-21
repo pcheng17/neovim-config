@@ -23,9 +23,6 @@ if !has('macunix')
 	end
 end
 
-" Set font
-set guifont=Monospace\ 11
-
 " Initialize theme 
 let ayucolor="dark"
 colorscheme ayu
