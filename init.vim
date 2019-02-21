@@ -23,6 +23,9 @@ if !has('macunix')
 	end
 end
 
+" Set font size
+set guifont=Monospace\ 11
+
 " Initialize theme 
 let ayucolor="dark"
 colorscheme ayu
@@ -39,8 +42,8 @@ set expandtab
 set splitright
 set splitbelow
 
-" Yank to clipboard
-" set clipboard+=unnamedplus
+" Make lightline work on one window
+set laststatus=2
 
 
 
@@ -50,3 +53,4 @@ set splitbelow
 source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
 source ~/vim-config/tex.vim
+source ~/vim-config/fzf.vim
