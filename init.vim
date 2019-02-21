@@ -1,7 +1,7 @@
 " ----------------------------------------------------------------------------
 " Load plugins
 " ----------------------------------------------------------------------------
-source ~/neovim-config/plugins.vim
+source ~/vim-config/plugins.vim
 
 
 
@@ -39,9 +39,6 @@ set expandtab
 set splitright
 set splitbelow
 
-" Allow mouse usage
-set mouse=a
-
 " Yank to clipboard
 " set clipboard+=unnamedplus
 
@@ -50,6 +47,6 @@ set mouse=a
 " ----------------------------------------------------------------------------
 " Load other specific settings
 " ----------------------------------------------------------------------------
-source ~/neovim-config/a.vim
-source ~/neovim-config/mappings.vim
-source ~/neovim-config/tex.vim
+source ~/vim-config/a.vim
+source ~/vim-config/mappings.vim
+source ~/vim-config/tex.vim
