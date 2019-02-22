@@ -53,3 +53,4 @@ set clipboard+=unnamedplus
 source ~/neovim-config/a.vim
 source ~/neovim-config/mappings.vim
 source ~/neovim-config/tex.vim
+source ~/neovim-config/fzf.vim
