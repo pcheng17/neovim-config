@@ -1,9 +1,9 @@
-# neovim-config
+# vim-config
 
-Peter's neovim configurations. Relies on vim_plug, which is included in this repo. 
+Peter's vim configurations. Relies on vim_plug, which is included in this repo. 
 
 ## Todo List
-* Add functionality to detect vim/neovim
+* Add instructions on what symlinks to create
 
 ## Commands to know
 
