@@ -1,7 +1,7 @@
 " ----------------------------------------------------------------------------
 " Load plugins
 " ----------------------------------------------------------------------------
-source ~/neovim-config/plugins.vim
+source ~/vim-config/plugins.vim
 
 
 
@@ -23,6 +23,9 @@ if !has('macunix')
 	end
 end
 
+" Set font size
+set guifont=Monospace\ 11
+
 " Initialize theme 
 let ayucolor="dark"
 colorscheme ayu
@@ -39,18 +42,15 @@ set expandtab
 set splitright
 set splitbelow
 
-" Allow mouse usage
-set mouse=a
-
-" Yank to clipboard
-set clipboard+=unnamedplus
+" Make lightline work on one window
+set laststatus=2
 
 
 
 " ----------------------------------------------------------------------------
 " Load other specific settings
 " ----------------------------------------------------------------------------
-source ~/neovim-config/a.vim
-source ~/neovim-config/mappings.vim
-source ~/neovim-config/tex.vim
-source ~/neovim-config/fzf.vim
+source ~/vim-config/a.vim
+source ~/vim-config/mappings.vim
+source ~/vim-config/tex.vim
+source ~/vim-config/fzf.vim
