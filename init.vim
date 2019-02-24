@@ -62,4 +62,4 @@ set hlsearch
 source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
 source ~/vim-config/tex.vim
-source ~/vim-config/fzf.vim
+source ~/vim-config/fzf_config.vim
