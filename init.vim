@@ -45,6 +45,10 @@ set splitbelow
 " Make lightline work on one window
 set laststatus=2
 
+" Search config
+set incsearch
+set hlsearch
+
 
 
 " ----------------------------------------------------------------------------
