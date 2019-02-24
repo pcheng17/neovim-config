@@ -24,7 +24,12 @@ if !has('macunix')
 end
 
 " Set font size
+" Wrap this first one in a conditional for my work computer 
 set guifont=Monospace\ 11
+
+if has('macunix')
+    set guifont=Consolas:h14
+end
 
 " Initialize theme 
 let ayucolor="dark"
