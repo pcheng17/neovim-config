@@ -1,6 +1,10 @@
 # vim-config
 
-Peter's vim configurations. In order to use, a few things need to be done first. 
+Peter's vim configurations. 
+
+## Getting started 
+
+In order to use, a few things need to be done first. 
 * If you already have a `.vimrc` file, back it up (e.g. `mv .vimrc .vimrc.bkup`) and then create a symlink to `init.vim` in this repo: `ln -s path/to/this/repo/init.vim ~/.vimrc`
 * This configuration relies on [vim-plug](https://github.com/junegunn/vim-plug), which you can either get by following the instructions in its README, or by creating a symlink to  it that is provided in this repo: `ln -s path/to/this/repo/autoload ~/.vim/`
 * I've also included some of my own snippets that [vim-snippets](https://github.com/honza/vim-snippets) picks up: `ln -s path/to/this/repo/snippets ~/.vim/`
