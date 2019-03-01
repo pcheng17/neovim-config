@@ -13,6 +13,7 @@ nmap <Leader>fq :q!<CR>
 
 " Shortcut for fuzzy finder
 nmap <Leader>fzf :Files<CR>
+nmap ; :Buffers<CR>
 
 " Shortcuts for vertical/horizontal split
 nmap <Leader>vs :vsplit

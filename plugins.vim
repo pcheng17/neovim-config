@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'qpkorr/vim-bufkill'
 " Plug 'mhinz/vim-grepper'
 " Plug 'w0rp/ale'
 
