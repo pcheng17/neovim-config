@@ -3,7 +3,7 @@
 " ----------------------------------------------------------------------------
 
 " Shortcut for re-sourcing init.vim
-nmap <Leader>rld :source ~/neovim-config/init.vim<CR>
+nmap <Leader>rld :source ~/.vimrc<CR>
 
 " Shortcuts for saving and quiting
 nmap <Leader>fs :w<CR> 
