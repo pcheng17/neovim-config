@@ -11,6 +11,16 @@ nmap <Leader>sq :wq<CR>
 nmap <Leader>qq :q<CR>
 nmap <Leader>fq :q!<CR>
 
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Shortcut for closing buffers using bufkill
+nmap <Leader>bd :BD<CR>
+vmap <Leader>bd <ESC>:BD<CR>
+
 " Shortcut for fuzzy finder
 nmap <Leader>fzf :Files<CR>
 nmap ; :Buffers<CR>
@@ -40,9 +50,3 @@ vmap <C-s> <ESC>:w<CR>
 
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
-
-" Easy window navigation
-" map <C-h> <C-w>h
-" map <C-j> <C-w>j
-" map <C-k> <C-w>k
-" map <C-l> <C-w>l

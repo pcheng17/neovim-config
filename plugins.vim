@@ -35,5 +35,8 @@ Plug 'honza/vim-snippets'
 " Latex
 Plug 'lervag/vimtex'
 
+" Override vim syntax for yaml files
+Plug 'stephpy/vim-yaml'
+
 " Initialize plugin system
 call plug#end()
