@@ -24,8 +24,8 @@ map <C-l> <C-w>l
 " Shortcut for closing buffers using bufkill
 " nmap <Leader>bd :BD<CR>
 " vmap <Leader>bd <ESC>:BD<CR>
-nmap <Leader>kw :BD<CR>
-vmap <Leader>kw <ESC>:BD<CR>
+nmap <Leader>kb :BD<CR>
+vmap <Leader>kb <ESC>:BD<CR>
 
 " Shortcut for fuzzy finder
 nmap <Leader>fzf :Files<CR>
