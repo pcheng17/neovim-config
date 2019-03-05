@@ -7,9 +7,13 @@ nmap <Leader>rld :source ~/.vimrc<CR>
 
 " Shortcuts for saving and quiting
 nmap <Leader>fs :w<CR> 
+vmap <Leader>fs <ESC>:w<CR>
 nmap <Leader>sq :wq<CR>
+vmap <Leader>sq <ESC>:wq<CR>
 nmap <Leader>qq :q<CR>
+vmap <Leader>qq <ESC>:q<CR>
 nmap <Leader>fq :q!<CR>
+vmap <Leader>fq <ESC>:q!<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
