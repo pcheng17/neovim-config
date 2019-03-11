@@ -54,6 +54,9 @@ set laststatus=2
 set incsearch
 set hlsearch
 
+" Turn on cursor line highlight
+set cursorline
+
 
 
 " ----------------------------------------------------------------------------
