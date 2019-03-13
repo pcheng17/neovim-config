@@ -28,7 +28,7 @@ nmap <Leader>kb :BD<CR>
 vmap <Leader>kb <ESC>:BD<CR>
 
 " Shortcut for fuzzy finder
-nmap <Leader>fzf :Files<CR>
+nmap <Leader>' :Files<CR>
 nmap ; :Buffers<CR>
 
 " Shortcuts for vertical/horizontal split
