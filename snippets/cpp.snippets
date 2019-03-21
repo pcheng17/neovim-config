@@ -3,6 +3,15 @@
 # using namespace
 snippet uns
 	using namespace 
+## 
+## Header guard
+snippet guard
+	#ifndef ${1:INSERT}_HAS_BEEN_INCLUDED
+	#define $1_HAS_BEEN_INCLUDED
+
+	${2}
+
+	#endif // $1_HAS_BEEN_INCLUDED
 ##
 ## Misc
 snippet sep
