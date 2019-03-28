@@ -44,12 +44,19 @@ Note that the leader key has been set to `<Space>` in `init.vim`. I chose `<Spac
 |`<Leader>hs`     | `:split` - Horizontal split                     |
 |`<Leader>noh`    | `:noh<CR>` - Turn off highlighting after search |
 |`<Leader>fzf`    | `:Files<CR>` - Launches the fuzzy finder        |
+|`<Leader>kb`     | `:BD<CR>` - Kills the current buffer using bufkill  |
+|`<Leader>;`      | `:Files<CR>` - Launches the fuzzy finder in the current directory |
+|`;`              | `:Buffers<CR>` - Launches the fuzzy finder buffer |
 
 #### Navigation
 
-| Command         | Description                                 |
-|:----------------|:--------------------------------------------|
-|`H`              | `10h`                                       |
-|`J`              | `10j`                                       |
-|`K`              | `10k`                                       |
-|`L`              | `10l`                                       |
+| Command         | Description                                     |
+|:----------------|:------------------------------------------------|
+|`H`              | `10h`                                           |
+|`J`              | `10j`                                           |
+|`K`              | `10k`                                           |
+|`L`              | `10l`                                           |
+|`<C-h>`          | `<C-w>h` - Move focus to the split to the left  |
+|`<C-j>`          | `<C-w>j` - Move focus to the split below        |
+|`<C-k>`          | `<C-w>k` - Move focus to the split above        |
+|`<C-l>`          | `<C-w>l` - Move focus to the split to the right |
