@@ -3,7 +3,11 @@
 " ----------------------------------------------------------------------------
 source ~/vim-config/plugins.vim
 
-
+" ----------------------------------------------------------------------------
+" Detect operating system
+" ----------------------------------------------------------------------------
+let isUnix = has('unix')
+let isMac = has('macunix')
 
 " ----------------------------------------------------------------------------
 " Leader
@@ -11,13 +15,11 @@ source ~/vim-config/plugins.vim
 let mapleader="\<SPACE>"
 nnoremap <Space> <nop>
 
-
-
 " ----------------------------------------------------------------------------
-" Basic settings 
+" Aesthetics 
 " ----------------------------------------------------------------------------
 " Only set termguicolors if not on Mac (colors look terrible)
-if !has('macunix')
+if !isMac
 	if (has("termguicolors"))
     	set termguicolors
 	end
@@ -27,37 +29,47 @@ end
 " Wrap this first one in a conditional for my work computer 
 set guifont=Monospace\ 11
 
-if has('macunix')
+if isMac
     set guifont=Consolas:h14
 end
 
-" Initialize theme 
-let ayucolor="dark"
+let ayucolor = "dark"
 colorscheme ayu
 
-" Turn on relative line numbers
-set relativenumber
+" ----------------------------------------------------------------------------
+" Basic settings
+" ----------------------------------------------------------------------------
+set relativenumber                      " Relative line numbers
 
-" Set tab indent to 4 spaces
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=4 shiftwidth=4 expandtab    " Use four spaces for tabs
 
-" More natural window-splitting behavior
-set splitright
-set splitbelow
+set splitright                          " Horizonital splits will always split to the right
+set splitbelow                          " vertical splits will always split below
 
-" Make lightline work on one window
-set laststatus=2
+set laststatus=2                        " Always display the status bar
 
-" Search config
-set incsearch
-set hlsearch
+set incsearch                           " Incremental search highlight
+set hlsearch                            " Highlight search patterns
+set cursorline                          " Highlight current line
 
-" Turn on cursor line highlight
-set cursorline
+set wildmenu                            " Better menu with completion in command mode
+set wildmode=longest:full,full
 
+set completeopt=longest,menuone,preview " Better insert mode completions
 
+if isUnix                               " If work machine...
+    set swapfile                        " turn on swap files...
+    set dir=/tmp                        " and set their location to the /tmp dir
+end
+
+" ----------------------------------------------------------------------------
+" netrw settings
+" ----------------------------------------------------------------------------
+let g:netrw_banner = 0
+let g:netrw_winsize = 20
+let g:netrw_liststyle = 3
+let g:netrw_localrmdir = 'rm -r'
+let g:netrw_altv = 1
 
 " ----------------------------------------------------------------------------
 " Load other specific settings

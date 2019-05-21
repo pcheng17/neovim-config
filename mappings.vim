@@ -22,8 +22,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Shortcut for closing buffers using bufkill
-" nmap <Leader>bd :BD<CR>
-" vmap <Leader>bd <ESC>:BD<CR>
 nmap <Leader>kb :BD<CR>
 vmap <Leader>kb <ESC>:BD<CR>
 
@@ -45,7 +43,7 @@ vnoremap J 10j
 vnoremap K 10k
 vnoremap L 10l
 
-" Save"
+" Save
 imap <C-s> <ESC>:w<CR>
 nmap <C-s> :w<CR>
 vmap <C-s> <ESC>:w<CR>
@@ -56,3 +54,13 @@ vmap <C-s> <ESC>:w<CR>
 
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
+
+" Toggle netrw on the left side of the editor
+nnoremap <leader>nt :Vexplore<CR>
+
+" Menu navigation enhancement (for completeopt)
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+  \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
