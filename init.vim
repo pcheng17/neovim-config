@@ -35,6 +35,7 @@ end
 
 let ayucolor = "dark"
 colorscheme ayu
+" colorscheme janah
 
 " ----------------------------------------------------------------------------
 " Basic settings

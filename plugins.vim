@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 " Colors
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'mhinz/vim-janah'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
