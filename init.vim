@@ -39,6 +39,10 @@ colorscheme ayu
 " ----------------------------------------------------------------------------
 " Basic settings
 " ----------------------------------------------------------------------------
+if has("gui_running")
+    set lines=59 columns=110                " Initial window size
+endif
+
 set relativenumber                      " Relative line numbers
 
 set tabstop=4 shiftwidth=4 expandtab    " Use four spaces for tabs
