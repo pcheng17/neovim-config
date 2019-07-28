@@ -41,7 +41,11 @@ colorscheme ayu
 " Basic settings
 " ----------------------------------------------------------------------------
 if has("gui_running")
-    set lines=59 columns=110                " Initial window size
+    if isMac
+        set lines=50 columns=110
+    else
+        set lines=59 columns=110        " Initial window size
+    endif
 endif
 
 set relativenumber                      " Relative line numbers
