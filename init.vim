@@ -33,8 +33,10 @@ if isMac
     set guifont=Consolas:h14
 end
 
-let ayucolor = "dark"
-colorscheme ayu
+" let ayucolor = "dark"
+let g:gruvbox_contrast_dark = 'dark'
+colorscheme gruvbox
+set bg=dark
 " colorscheme janah
 
 " ----------------------------------------------------------------------------
