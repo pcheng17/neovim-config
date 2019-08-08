@@ -47,6 +47,10 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
+" gruvbox lightline settings
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
+
 " ----------------------------------------------------------------------------
 " Basic settings
 " ----------------------------------------------------------------------------
