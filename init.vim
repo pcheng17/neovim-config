@@ -34,10 +34,18 @@ if isMac
 end
 
 " let ayucolor = "dark"
-let g:gruvbox_contrast_dark = 'dark'
-colorscheme gruvbox
-set bg=dark
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
+silent colorscheme gruvbox
+" set bg=dark
 " colorscheme janah
+
+" gruvbox related settings
+nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " ----------------------------------------------------------------------------
 " Basic settings
