@@ -7,12 +7,12 @@
 call plug#begin('~/.vim/plugged')
 
 " Colors
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
-Plug 'mhinz/vim-janah'
-Plug 'arcticicestudio/nord-vim'
-Plug 'morhetz/gruvbox'
+Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'mhinz/vim-janah'
+" Plug 'arcticicestudio/nord-vim'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
