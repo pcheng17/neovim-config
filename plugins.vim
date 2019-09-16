@@ -30,17 +30,13 @@ Plug 'tpope/vim-surround'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'qpkorr/vim-bufkill'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'mhinz/vim-grepper'
 " Plug 'w0rp/ale'
 
-" SnipMate
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
 " Ultisnips
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Latex
 Plug 'lervag/vimtex'
