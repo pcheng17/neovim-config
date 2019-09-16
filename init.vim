@@ -98,8 +98,8 @@ let g:netrw_altv = 1
 " Ultisnips configuration
 " ----------------------------------------------------------------------------
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ----------------------------------------------------------------------------
 " Load other specific settings
