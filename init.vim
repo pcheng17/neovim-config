@@ -95,6 +95,13 @@ let g:netrw_localrmdir = 'rm -r'
 let g:netrw_altv = 1
 
 " ----------------------------------------------------------------------------
+" Ultisnips configuration
+" ----------------------------------------------------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" ----------------------------------------------------------------------------
 " Load other specific settings
 " ----------------------------------------------------------------------------
 source ~/vim-config/a.vim

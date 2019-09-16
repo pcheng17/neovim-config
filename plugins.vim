@@ -39,6 +39,9 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
+" Ultisnips
+Plug 'SirVer/ultisnips'
+
 " Latex
 Plug 'lervag/vimtex'
 
