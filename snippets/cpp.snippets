@@ -1,31 +1,38 @@
 ##
 ## Namespace statements
 # using namespace
-snippet uns
-	using namespace 
+snippet uns "using namespace" b
+using namespace 
+endsnippet
 ## 
 ## Header guard
-snippet guard
-	#ifndef ${1:INSERT}_HAS_BEEN_INCLUDED
-	#define $1_HAS_BEEN_INCLUDED
+snippet guard "heard guard" b
+#ifndef ${1:INSERT}_HAS_BEEN_INCLUDED
+#define $1_HAS_BEEN_INCLUDED
 
-	${2}
+${2}
 
-	#endif // $1_HAS_BEEN_INCLUDED
+#endif // $1_HAS_BEEN_INCLUDED
+endsnippet
 ##
 ## include
-snippet incbr
-	#include <${1:iostream}>
-snippet incq
-	#include "${1:file}.h"
+snippet incbr "#include with brackets" b
+#include <${1:iostream}>
+endsnippet
+
+snippet incq "#include with quotes" b
+#include "${1:file}.h"
+endsnippet
 ##
 ## Misc
-snippet sep
-	// -----------------------------------------------------------------------------
+snippet sep "separator" b
+// -----------------------------------------------------------------------------
+endsnippet
 ##
 ## Lambda
-snippet mlld
-	[${1}](${2}) -> ${3}
-	{
-		${4}
-	};
+snippet mlld "multi-line lambda"
+[${1}](${2}) -> ${3}
+{
+	${4}
+};
+endsnippet
