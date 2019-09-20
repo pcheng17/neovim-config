@@ -114,3 +114,4 @@ source ~/vim-config/mappings.vim
 source ~/vim-config/tex_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/cpp_config.vim
+source ~/vim-config/py_config.vim
