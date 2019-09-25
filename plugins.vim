@@ -31,7 +31,8 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'qpkorr/vim-bufkill'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper'
+Plug 'airblade/vim-rooter'
 " Plug 'w0rp/ale'
 
 " Ultisnips

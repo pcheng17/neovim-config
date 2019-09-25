@@ -48,10 +48,6 @@ imap <C-s> <ESC>:w<CR>
 nmap <C-s> :w<CR>
 vmap <C-s> <ESC>:w<CR>
 
-" grep
-" nmap <Leader>gr :Grepper<CR>
-" vmap <Leader>gr :Grepper<CR>
-
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
 
