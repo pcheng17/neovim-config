@@ -14,6 +14,10 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'mhinz/vim-janah'
 " Plug 'arcticicestudio/nord-vim'
 
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'junegunn/fzf.vim'
+
 " Utils
 Plug 'mhinz/vim-startify'
 Plug 'itchyny/lightline.vim'
@@ -29,7 +33,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mhinz/vim-grepper'
 Plug 'airblade/vim-rooter'
-Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'w0rp/ale'
 
 " Ultisnips

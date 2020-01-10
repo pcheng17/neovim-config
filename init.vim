@@ -114,7 +114,7 @@ source ~/vim-config/mappings.vim
 source ~/vim-config/tex_config.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/py_config.vim
-source ~/vim-config/ctrlp_config.vim
+source ~/vim-config/fzf_config.vim
 source ~/vim-config/vim-grepper_config.vim
 source ~/vim-config/vim-rooter_config.vim
 source ~/vim-config/vim-startify_config.vim
