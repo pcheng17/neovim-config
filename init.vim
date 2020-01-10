@@ -21,7 +21,7 @@ let mapleader="\<SPACE>"
 nnoremap <Space> <nop>
 
 " ----------------------------------------------------------------------------
-" Aesthetics 
+" Aesthetics
 " ----------------------------------------------------------------------------
 " Only set termguicolors if not on Mac (colors look terrible)
 if !isMac
@@ -31,7 +31,7 @@ if !isMac
 end
 
 " Set font size
-" Wrap this first one in a conditional for my work computer 
+" Wrap this first one in a conditional for my work computer
 set guifont=Monospace\ 11
 
 if isMac
@@ -105,6 +105,15 @@ let g:netrw_altv = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" ----------------------------------------------------------------------------
+" Use ag for grep
+" ----------------------------------------------------------------------------
+" if executable('/rel/third_party/the_silver_searcher/2.2.0/bin/ag')
+"     set grepprg=ag\ --nogroup\ --column
+"     let g:ctrlp_user_command = 'ag %s -l -g ""'
+"     let g:ctrlp_use_caching = 0
+" endif
 
 " ----------------------------------------------------------------------------
 " Load other specific settings

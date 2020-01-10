@@ -6,7 +6,7 @@
 nmap <Leader>rld :source ~/.vimrc<CR>
 
 " Shortcuts for saving and quiting
-nmap <Leader>fs :w<CR> 
+nmap <Leader>fs :w<CR>
 vmap <Leader>fs <ESC>:w<CR>
 nmap <Leader>sq :wq<CR>
 vmap <Leader>sq <ESC>:wq<CR>
@@ -24,10 +24,6 @@ map <C-l> <C-w>l
 " Shortcut for closing buffers using bufkill
 nmap <Leader>kb :BD<CR>
 vmap <Leader>kb <ESC>:BD<CR>
-
-" Shortcut for fuzzy finder
-nmap <Leader>; :Files<CR>
-nmap ; :Buffers<CR>
 
 " Shortcuts for vertical/horizontal split
 nmap <Leader>vs :vsplit
