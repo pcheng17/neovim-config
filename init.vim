@@ -107,23 +107,14 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ----------------------------------------------------------------------------
-" Use ag for grep
-" ----------------------------------------------------------------------------
-" if executable('/rel/third_party/the_silver_searcher/2.2.0/bin/ag')
-"     set grepprg=ag\ --nogroup\ --column
-"     let g:ctrlp_user_command = 'ag %s -l -g ""'
-"     let g:ctrlp_use_caching = 0
-" endif
-
-" ----------------------------------------------------------------------------
 " Load other specific settings
 " ----------------------------------------------------------------------------
 source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
 source ~/vim-config/tex_config.vim
-source ~/vim-config/fzf_config.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/py_config.vim
+source ~/vim-config/ctrlp_config.vim
 source ~/vim-config/vim-grepper_config.vim
 source ~/vim-config/vim-rooter_config.vim
 source ~/vim-config/vim-startify_config.vim
