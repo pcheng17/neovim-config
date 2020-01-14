@@ -44,6 +44,15 @@ imap <C-s> <ESC>:w<CR>
 nmap <C-s> :w<CR>
 vmap <C-s> <ESC>:w<CR>
 
+" Copy to clipboard
+vnoremap <Leader>y "+y
+
+" Paste from clipboard
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+
 " Turn off highlighting
 nmap <Leader>noh :noh<CR>
 
