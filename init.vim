@@ -76,6 +76,8 @@ set splitbelow                          " vertical splits will always split belo
 
 set laststatus=2                        " Always display the status bar
 
+set mouse=a                             " Enable mouse
+
 set incsearch                           " Incremental search highlight
 set hlsearch                            " Highlight search patterns
 set cursorline                          " Highlight current line
