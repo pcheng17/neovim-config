@@ -14,7 +14,9 @@ let g:startify_lists = [
 if !isMac
     let g:startify_bookmarks = [
           \ { 'aa': '/usr/pic1/workspaces/flux/src' },
-          \ { 'bb': '/usr/pic1/workspaces/whip/cfx_whip' },
-          \ { 'cc': '/usr/pic1/workspaces/whip/cfx_whip_houdini' },
+          \ { 'bb': '/usr/pic1/workspaces/whip' },
+          \ { 'cc': '/usr/pic1/workspaces/whip/cfx_whip' },
+          \ { 'dd': '/usr/pic1/workspaces/whip/cfx_whip_houdini' },
+          \ { 'ee': '/usr/pic1/workspaces/mpm' },
           \ ]
 end
