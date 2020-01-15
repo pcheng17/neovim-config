@@ -16,6 +16,11 @@ nmap <Leader>fq :q!<CR>
 vmap <Leader>fq <ESC>:q!<CR>
 
 " Easy window navigation
+if has('nvim')
+    " Fix <C-h> in neovim
+    nmap <BS> <C-w>h
+    vmap <BS> <C-w>h
+endif
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
