@@ -50,6 +50,8 @@ nmap <C-s> :w<CR>
 vmap <C-s> <ESC>:w<CR>
 
 " Copy to clipboard
+nnoremap <Leader>yy "+yy
+nnoremap <Leader>y$ "+y$
 vnoremap <Leader>y "+y
 
 " Paste from clipboard
