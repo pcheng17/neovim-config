@@ -72,3 +72,7 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
   \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+
+" Iterative word replace via .
+nnoremap c* /\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgn
+nnoremap c# ?\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgN
