@@ -15,6 +15,9 @@ vmap <Leader>qq <ESC>:q<CR>
 nmap <Leader>fq :q!<CR>
 vmap <Leader>fq <ESC>:q!<CR>
 
+" Shortcut to append this line with the next with a space
+nnoremap U J
+
 " Easy window navigation
 if has('nvim')
     " Fix <C-h> in neovim
