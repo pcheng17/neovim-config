@@ -64,10 +64,10 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
 " Turn off highlighting
-nmap <Leader>noh :noh<CR>
+noremap <Leader>noh :noh<CR>
 
-" Toggle netrw on the left side of the editor
-nnoremap <leader>nt :Vexplore<CR>
+" Nerd tree
+noremap <Leader>nt :NERDTreeToggle<CR>
 
 " Menu navigation enhancement (for completeopt)
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
