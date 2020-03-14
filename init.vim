@@ -92,6 +92,8 @@ if isUnix                               " If work machine...
     set dir=/tmp                        " and set their location to the /tmp dir
 end
 
+set noeb vb t_vb=
+
 " ----------------------------------------------------------------------------
 " netrw settings
 " ----------------------------------------------------------------------------
