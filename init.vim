@@ -94,8 +94,6 @@ end
 
 set noeb vb t_vb=                       " Disable audio and visual bell
 
-set sessionoptions-=buffers             " Don't save hidden and unloaded buffers
-
 " ----------------------------------------------------------------------------
 " Ultisnips configuration
 " ----------------------------------------------------------------------------
