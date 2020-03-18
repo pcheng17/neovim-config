@@ -94,14 +94,6 @@ end
 
 set noeb vb t_vb=
 
-" ----------------------------------------------------------------------------
-" netrw settings
-" ----------------------------------------------------------------------------
-let g:netrw_banner = 0
-let g:netrw_winsize = 20
-let g:netrw_liststyle = 3
-let g:netrw_localrmdir = 'rm -r'
-let g:netrw_altv = 1
 
 " ----------------------------------------------------------------------------
 " Ultisnips configuration
