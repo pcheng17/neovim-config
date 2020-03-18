@@ -92,8 +92,9 @@ if isUnix                               " If work machine...
     set dir=/tmp                        " and set their location to the /tmp dir
 end
 
-set noeb vb t_vb=
+set noeb vb t_vb=                       " Disable audio and visual bell
 
+set sessionoptions-=buffers             " Don't save hidden and unloaded buffers
 
 " ----------------------------------------------------------------------------
 " Ultisnips configuration
