@@ -38,13 +38,10 @@ if isMac
     set guifont=Consolas:h14
 end
 
-" let ayucolor = "dark"
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
-" set bg=dark
-" colorscheme janah
 
 " gruvbox related settings
 nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
