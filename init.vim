@@ -53,6 +53,9 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 
+" Sessions options
+let g:session_autosave = 'no'
+
 " ----------------------------------------------------------------------------
 " Basic settings
 " ----------------------------------------------------------------------------
