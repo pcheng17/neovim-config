@@ -87,10 +87,7 @@ set wildmode=longest:full,full
 
 set completeopt=longest,menuone,preview " Better insert mode completions
 
-if isUnix                               " If work machine...
-    set swapfile                        " turn on swap files...
-    set dir=/tmp                        " and set their location to the /tmp dir
-end
+set formatoptions-=cro                  " Disable continuation of comments
 
 set noeb vb t_vb=                       " Disable audio and visual bell
 
