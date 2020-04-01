@@ -7,10 +7,13 @@ augroup cpp_config
 	autocmd!
     " Set the comment string to be //
     autocmd FileType c,cpp setlocal commentstring=//\ %s
-    " Continuation of doxygen-style comments, i.e. ///
-    autocmd FileType c,cpp setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,bO:///
+    " Continuation of multiline comments
+    " autocmd FileType c,cpp setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/
     " Disable continuation of single-line comments
     autocmd FileType c,cpp setlocal comments-=:// comments+=f://
     " Remove all trailing whitespace
     autocmd BufWritePre * %s/\s\+$//e
 augroup END
+
+" Do not indent inside namespace block
+set cino=N-s

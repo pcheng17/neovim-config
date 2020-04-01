@@ -89,6 +89,10 @@ set completeopt=longest,menuone,preview " Better insert mode completions
 
 set noeb vb t_vb=                       " Disable audio and visual bell
 
+" Disable automatic comment continuation
+autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
+autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
+
 " ----------------------------------------------------------------------------
 " Ultisnips configuration
 " ----------------------------------------------------------------------------
@@ -116,7 +120,7 @@ source ~/vim-config/vim-startify_config.vim
 " ----------------------------------------------------------------------------
 augroup AutoSwap
         autocmd!
-        autocmd SwapExists *  call AS_HandleSwapfile(expand('<afile>:p'), v:swapname)
+        autocmd SwapExists * call AS_HandleSwapfile(expand('<afile>:p'), v:swapname)
 augroup END
 
 function! AS_HandleSwapfile (filename, swapname)
