@@ -6,8 +6,8 @@
 nmap <Leader>rld :source ~/.vimrc<CR>
 
 " Shortcuts for saving and quiting
-nmap <Leader>ww :w<CR>
-vmap <Leader>ww <ESC>:w<CR>
+nmap <Leader>wf :w<CR>
+vmap <Leader>wf <ESC>:w<CR>
 nmap <Leader>sq :wq<CR>
 vmap <Leader>sq <ESC>:wq<CR>
 nmap <Leader>qq :q<CR>
