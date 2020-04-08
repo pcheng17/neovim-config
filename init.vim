@@ -93,6 +93,16 @@ set noeb vb t_vb=                       " Disable audio and visual bell
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
 autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
 
+" Remove trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 " ----------------------------------------------------------------------------
 " Ultisnips configuration
 " ----------------------------------------------------------------------------
@@ -107,7 +117,6 @@ source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
 source ~/vim-config/tex_config.vim
 source ~/vim-config/cpp_config.vim
-source ~/vim-config/py_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/nerdtree-config.vim
 source ~/vim-config/vim-grepper_config.vim

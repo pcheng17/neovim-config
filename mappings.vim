@@ -6,10 +6,10 @@
 nmap <Leader>rld :source ~/.vimrc<CR>
 
 " Shortcuts for saving and quiting
-nmap <Leader>fs :w<CR>
-vmap <Leader>fs <ESC>:w<CR>
-nmap <Leader>sq :wq<CR>
-vmap <Leader>sq <ESC>:wq<CR>
+nmap <Leader>fs :up<CR>
+vmap <Leader>fs <ESC>:up<CR>
+nmap <Leader>sq :up<CR>:q<CR>
+vmap <Leader>sq <ESC>:up<CR>:q<CR>
 nmap <Leader>qq :q<CR>
 vmap <Leader>qq <ESC>:q<CR>
 nmap <Leader>fq :q!<CR>
@@ -48,9 +48,9 @@ vnoremap K 10k
 vnoremap L 10l
 
 " Save
-imap <C-s> <ESC>:w<CR>
-nmap <C-s> :w<CR>
-vmap <C-s> <ESC>:w<CR>
+imap <C-s> <C-o>:up<CR>
+nmap <C-s> :up<CR>
+vmap <C-s> <ESC>:up<CR>
 
 " Copy to clipboard
 nnoremap <Leader>yy "+yy
