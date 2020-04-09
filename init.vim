@@ -95,10 +95,9 @@ autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
 
 " Remove trailing whitespace
 function! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
+    let pos = getpos(".")
     %s/\s\+$//e
-    call cursor(l, c)
+    call setpos('.', pos)
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
