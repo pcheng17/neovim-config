@@ -13,6 +13,7 @@ set runtimepath+=~/.vim/my-snippets/
 " ----------------------------------------------------------------------------
 let isUnix = has('unix')
 let isMac = has('macunix')
+let isWindows = has('win32')
 
 " ----------------------------------------------------------------------------
 " Leader
@@ -26,16 +27,19 @@ nnoremap <Space> <nop>
 " Only set termguicolors if not on Mac (colors look terrible)
 if !isMac
 	if (has("termguicolors"))
-    	set termguicolors
+        set termguicolors
 	end
 end
 
 " Set font size
-" Wrap this first one in a conditional for my work computer
-set guifont=Monospace\ 11
-
+if isUnix
+    set guifont=Monospace\ 11
+end
 if isMac
     set guifont=Consolas:h14
+end
+if isWindows
+    set guifont=Consolas:h13
 end
 
 set background=dark
