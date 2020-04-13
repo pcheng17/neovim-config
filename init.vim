@@ -69,6 +69,7 @@ if has("gui_running")
     else
         set lines=59 columns=110        " Initial window size
     endif
+    set guioptions-=T
 endif
 
 set relativenumber                      " Relative line numbers
