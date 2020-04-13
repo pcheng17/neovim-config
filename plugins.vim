@@ -15,7 +15,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'arcticicestudio/nord-vim'
 
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Utils

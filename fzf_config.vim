@@ -5,4 +5,5 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 nnoremap <expr> <Leader>; (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
+nnoremap <Leader><space> :Files<CR>
 nnoremap ; :Buffers<CR>
