@@ -1,8 +1,8 @@
 " ----------------------------------------------------------------------------
-" vim-rooter config 
+" vim-rooter config
 " ----------------------------------------------------------------------------
 
-nnoremap <Leader>root :Rooter<CR>
+" :Rooter sets the working directory to the git root of the current file
 
 let g:rooter_patterns = ['.git/']
 let g:rooter_manual_only = 1

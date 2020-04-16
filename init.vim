@@ -13,7 +13,7 @@ set runtimepath+=~/.vim/my-snippets/
 " ----------------------------------------------------------------------------
 let isUnix = has('unix')
 let isMac = has('macunix')
-let isWindows = has('win32')
+let isWindows = has('win32') || has('win64')
 
 " ----------------------------------------------------------------------------
 " Leader
@@ -69,7 +69,7 @@ if has("gui_running")
     else
         set lines=59 columns=110        " Initial window size
     endif
-    set guioptions-=T
+    set guioptions-=T                   " Remove top tool bar
 endif
 
 set relativenumber                      " Relative line numbers
@@ -94,19 +94,22 @@ set completeopt=longest,menuone,preview " Better insert mode completions
 
 set noeb vb t_vb=                       " Disable audio and visual bell
 
+" Source vimrc
 command SourceConfig source ~/.vimrc
 
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
 autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
 
-" Remove trailing whitespace
+" Remove all trailing whitespace and then return the cursor back to its
+" original location (where it was when this function was invoked).
 function! <SID>StripTrailingWhitespaces()
     let pos = getpos(".")
     %s/\s\+$//e
     call setpos('.', pos)
 endfun
 
+" Remove trailing whitespace before writing
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " ----------------------------------------------------------------------------
@@ -121,7 +124,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " ----------------------------------------------------------------------------
 source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
-source ~/vim-config/tex_config.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/nerdtree-config.vim
