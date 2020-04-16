@@ -36,7 +36,7 @@ if isUnix
     set guifont=Monospace\ 11
 end
 if isMac
-    set guifont=Consolas:h14
+    set guifont=Consolas:h15
 end
 if isWindows
     set guifont=Consolas:h13
@@ -93,6 +93,8 @@ set wildmode=longest:full,full
 set completeopt=longest,menuone,preview " Better insert mode completions
 
 set noeb vb t_vb=                       " Disable audio and visual bell
+
+command SourceConfig source ~/.vimrc
 
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro

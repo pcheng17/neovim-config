@@ -2,9 +2,6 @@
 " Mappings
 " ----------------------------------------------------------------------------
 
-" Shortcut for re-sourcing init.vim
-nmap <Leader>rld :source ~/.vimrc<CR>
-
 " Shortcuts for saving and quiting
 nmap <Leader>fs :up<CR>
 vmap <Leader>fs <ESC>:up<CR>
