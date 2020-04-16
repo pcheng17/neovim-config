@@ -75,7 +75,7 @@ let g:lightline = {
     \ 'colorscheme': 'seoul256',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -124,7 +124,7 @@ set completeopt=longest,menuone,preview " Better insert mode completions
 set noeb vb t_vb=                       " Disable audio and visual bell
 
 " Source vimrc
-command SourceConfig source ~/.vimrc
+command! SourceConfig source ~/.vimrc
 
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
