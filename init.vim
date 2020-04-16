@@ -1,6 +1,6 @@
-" ----------------------------------------------------------------------------
-" Load plugins
-" ----------------------------------------------------------------------------
+"-----------------------------------------------------------
+"" Load plugins
+"-----------------------------------------------------------
 source ~/vim-config/plugins.vim
 
 " ----------------------------------------------------------------------------
@@ -32,20 +32,23 @@ if !isMac
 end
 
 " Set font size
+" TODO This belongs inside an if statement for gui_running!!!
 if isUnix
     set guifont=Monospace\ 11
 end
 if isMac
-    set guifont=Consolas:h15
+    set guifont=Roboto\ Mono:h14
 end
 if isWindows
     set guifont=Consolas:h13
 end
 
 set background=dark
+let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
+" silent colorscheme jellybeans
 
 " gruvbox related settings
 nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
@@ -53,9 +56,21 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
-" gruvbox lightline settings
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+" Lightline settings
+let g:lightline = {
+    \ 'colorscheme': 'seoul256',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ],
+    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
+    \ },
+    \ }
+set noshowmode
 
 " Sessions options
 let g:session_autosave = 'no'

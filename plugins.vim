@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colors
 Plug 'ayu-theme/ayu-vim'
+Plug 'nanotech/jellybeans.vim'
 Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'drewtempelmeyer/palenight.vim'
