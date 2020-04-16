@@ -37,7 +37,7 @@ if isUnix
     set guifont=Monospace\ 11
 end
 if isMac
-    set guifont=Consolas:h16
+    set guifont=Consolas:h15
     " set guifont=Inconsolata:h17
     " set guifont=Roboto\ Mono:h15
 end
