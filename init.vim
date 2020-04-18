@@ -8,22 +8,32 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
+set foldmethod=marker
+
 "-----------------------------------------------------------
-" Load plugins
+" Plugins
 "-----------------------------------------------------------
 source ~/vim-config/plugins.vim
 
 "-----------------------------------------------------------
-" Add runtimepaths
+" Set runtimepath
 "-----------------------------------------------------------
 set runtimepath+=~/.vim/my-snippets/
 
 "-----------------------------------------------------------
 " Detect operating system
 "-----------------------------------------------------------
-let isUnix = has('unix')
-let isMac = has('macunix')
-let isWindows = has('win32') || has('win64')
+function! ConfigSetEnv() abort
+    if exists('g:Env')
+        return
+    endif
+    if has('win64') || has('win32') || has('win16')
+        let g:Env = 'WINDOWS'
+    else
+        let g:Env = toupper(substitute(system('uname'), '\n', '', ''))
+    endif
+endfunction
+call ConfigSetEnv()
 
 "-----------------------------------------------------------
 " Set leader key
@@ -35,24 +45,10 @@ nnoremap <Space> <nop>
 " Aesthetics
 "-----------------------------------------------------------
 " Only set termguicolors if not on Mac
-if !isMac
+if (g:Env !~# 'DARWIN')
 	if (has("termguicolors"))
         set termguicolors
 	end
-end
-
-" Set font size
-" TODO This belongs inside an if statement for gui_running!!!
-if isUnix
-    set guifont=Monospace\ 11
-end
-if isMac
-    set guifont=Consolas:h15
-    " set guifont=Inconsolata:h17
-    " set guifont=Roboto\ Mono:h15
-end
-if isWindows
-    set guifont=Consolas:h13
 end
 
 set background=dark
@@ -68,9 +64,7 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
-"-------------------------------------------------------------------------------
-" Lightline settings
-"-------------------------------------------------------------------------------
+" Lightline settings {{{
 let g:lightline = {
     \ 'colorscheme': 'seoul256',
     \ 'active': {
@@ -84,7 +78,8 @@ let g:lightline = {
     \   'gitbranch': 'FugitiveHead'
     \ },
     \ }
-set noshowmode
+set noshowmode    " Removes the current mode from the bottom-most bar
+" }}}
 
 " Sessions options
 let g:session_autosave = 'no'
@@ -93,10 +88,20 @@ let g:session_autosave = 'no'
 " Basic settings
 "-------------------------------------------------------------------------------
 if has("gui_running")
-    if isMac
-        set lines=50 columns=100
-    else
-        set lines=59 columns=110        " Initial window size
+    if (g:Env =~# 'DARWIN')
+        set lines=50
+        set columns=100
+        set guifont=Consolas:h15
+        " set guifont=Inconsolata:h17
+        " set guifont=Roboto\ Mono:h15
+    elseif (g:Env =~# 'LINUX')
+        set lines=59
+        set columns=110
+        set guifont=Monospace\ 11
+    elseif (g:Env =~# 'WINDOWS')
+        set lines=59
+        set columns=110
+        set guifont=Consolas:h13
     endif
     set guioptions-=T                   " Remove top tool bar
 endif
@@ -141,17 +146,34 @@ endfun
 " Remove trailing whitespace before writing
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-"-------------------------------------------------------------------------------
-" vim-fugitive settings and mappings
-"-------------------------------------------------------------------------------
-nnoremap <Leader>gs :Git status<CR>
-
-"-------------------------------------------------------------------------------
-" Ultisnips configuration
-"-------------------------------------------------------------------------------
+" Nerdtree configurations {{{
+let NERDTreeMapOpenSplit='s'
+let NERDTreeMapPreviewSplit='gs'
+let NERDTreeMapOpenVSplit='v'
+let NERDTreeMapPreviewVSplit='gv'
+" }}}
+" Ultisnips configurations {{{
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }}}
+" vim-fugitive configurations {{{
+nnoremap <Leader>gs :Git status<CR>
+" }}}
+" vim-grepper configurations {{{
+" Mappings
+nnoremap <Leader>gr :Grepper -tool git<CR>
+nnoremap <Leader>wgr :Grepper -tool git -cword -noprompt<CR>
+" Search for todo and fixme
+command! TODO :Grepper -tool git -noprompt -query '\(TODO\|FIXME\)'
+" }}}
+" vim-rooter configurations {{{
+" :Rooter sets the working directory to the git root of the current file
+let g:rooter_patterns = ['.git/']
+let g:rooter_manual_only = 1
+let g:rooter_resolve_links = 1
+let g:rooter_silent_chdir = 1
+" }}}
 
 "-------------------------------------------------------------------------------
 " Load other specific settings
@@ -160,9 +182,6 @@ source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/fzf_config.vim
-source ~/vim-config/nerdtree-config.vim
-source ~/vim-config/vim-grepper_config.vim
-source ~/vim-config/vim-rooter_config.vim
 source ~/vim-config/vim-startify_config.vim
 
 "-------------------------------------------------------------------------------
