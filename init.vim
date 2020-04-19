@@ -8,8 +8,6 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
-set foldmethod=marker
-
 "-----------------------------------------------------------
 " Plugins
 "-----------------------------------------------------------
@@ -21,7 +19,7 @@ source ~/vim-config/plugins.vim
 set runtimepath+=~/.vim/my-snippets/
 
 "-----------------------------------------------------------
-" Detect operating system
+" Detect operation system and host
 "-----------------------------------------------------------
 function! ConfigSetEnv() abort
     if exists('g:Env')
@@ -34,6 +32,14 @@ function! ConfigSetEnv() abort
     endif
 endfunction
 call ConfigSetEnv()
+
+function! ConfigSetHost() abort
+    if exists('g:Hostname')
+        return
+    endif
+       let g:Hostname = hostname()
+endfunction
+call ConfigSetHost()
 
 "-----------------------------------------------------------
 " Set leader key
@@ -127,6 +133,8 @@ set wildmode=longest:full,full
 set completeopt=longest,menuone,preview " Better insert mode completions
 
 set noeb vb t_vb=                       " Disable audio and visual bell
+
+set foldmethod=marker                   " Set folding method
 
 " Source vimrc
 command! SourceConfig source ~/.vimrc
