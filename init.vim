@@ -165,6 +165,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
+" vim-easy-align configurations {{{
+xmap ea <Plug>(EasyAlign)
+nmap ea <Plug>(EasyAlign)
+" }}}
 " vim-fugitive configurations {{{
 nnoremap <Leader>gs :Git status<CR>
 " }}}
