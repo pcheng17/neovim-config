@@ -154,6 +154,9 @@ endfun
 " Remove trailing whitespace before writing
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" EditorConfig configurations {{{
+let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
+" }}}
 " Nerdtree configurations {{{
 let NERDTreeMapOpenSplit='s'
 let NERDTreeMapPreviewSplit='gs'
