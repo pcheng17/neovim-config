@@ -57,22 +57,25 @@ if (g:Env !~# 'DARWIN')
 	end
 end
 
-set background=dark
-let g:gruvbox_italic=0
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection='0'
-silent colorscheme gruvbox
+colorscheme nord
+let g:nord_uniform_diff_background = 1
+
+" set background=dark
+" let g:gruvbox_italic=0
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_invert_selection='0'
+" silent colorscheme gruvbox
 " silent colorscheme jellybeans
 
 " gruvbox related settings
-nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+" nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " Lightline settings {{{
 let g:lightline = {
-    \ 'colorscheme': 'seoul256',
+    \ 'colorscheme': 'nord',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],

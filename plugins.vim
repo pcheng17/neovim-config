@@ -11,9 +11,9 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'arcticicestudio/nord-vim'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'mhinz/vim-janah'
-" Plug 'arcticicestudio/nord-vim'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
