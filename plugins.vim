@@ -38,7 +38,6 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdtree'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-" Plug 'ryanoasis/vim-devicons'
 " Plug 'w0rp/ale'
 
 " Ultisnips
