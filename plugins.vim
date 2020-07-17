@@ -7,13 +7,9 @@
 call plug#begin('~/.vim/plugged')
 
 " Colors
-Plug 'ayu-theme/ayu-vim'
-Plug 'nanotech/jellybeans.vim'
 Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'mhinz/vim-janah'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -38,7 +34,6 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdtree'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-" Plug 'w0rp/ale'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'
