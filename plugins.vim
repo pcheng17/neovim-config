@@ -34,6 +34,7 @@ Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdtree'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Ultisnips
 Plug 'SirVer/ultisnips'

@@ -116,6 +116,7 @@ if has("gui_running")
 endif
 
 set relativenumber                      " Relative line numbers
+set number                              " Current line number
 
 set tabstop=4 shiftwidth=4 expandtab    " Use four spaces for tabs
 
