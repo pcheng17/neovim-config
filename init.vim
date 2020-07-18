@@ -202,6 +202,7 @@ source ~/vim-config/mappings.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/vim-startify_config.vim
+source ~/vim-config/coc_config.vim
 
 "-------------------------------------------------------------------------------
 " Autoload files that have changed in neovim
