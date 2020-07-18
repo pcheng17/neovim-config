@@ -6,7 +6,7 @@ set nowritebackup
 set cmdheight=2
 
 " You will have a bad experience with diagnostic messages when it's default 4000
-set updatetime = 300
+set updatetime=300
 
 " Use <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
