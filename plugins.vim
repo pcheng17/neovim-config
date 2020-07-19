@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sainnhe/forest-night'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -35,6 +36,7 @@ Plug 'preservim/nerdtree'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'

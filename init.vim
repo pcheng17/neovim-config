@@ -57,8 +57,11 @@ if (g:Env !~# 'DARWIN')
 	end
 end
 
-colorscheme nord
-let g:nord_uniform_diff_background = 1
+let g:forest_night_disable_italic_comment = 1
+colorscheme forest-night
+
+" colorscheme nord
+" let g:nord_uniform_diff_background = 1
 
 " set background=dark
 " let g:gruvbox_italic=0
@@ -75,7 +78,7 @@ let g:nord_uniform_diff_background = 1
 
 " Lightline settings {{{
 let g:lightline = {
-    \ 'colorscheme': 'nord',
+    \ 'colorscheme': 'forest_night',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
