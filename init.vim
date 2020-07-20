@@ -57,28 +57,27 @@ if (g:Env !~# 'DARWIN')
 	end
 end
 
-let g:forest_night_disable_italic_comment = 1
-colorscheme forest-night
+" let g:forest_night_disable_italic_comment = 1
+" colorscheme forest-night
 
-" colorscheme nord
 " let g:nord_uniform_diff_background = 1
+" colorscheme nord
 
-" set background=dark
-" let g:gruvbox_italic=0
-" let g:gruvbox_contrast_dark='hard'
-" let g:gruvbox_invert_selection='0'
-" silent colorscheme gruvbox
-" silent colorscheme jellybeans
+set background=dark
+let g:gruvbox_italic=0
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
+silent colorscheme gruvbox
 
 " gruvbox related settings
-" nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " Lightline settings {{{
 let g:lightline = {
-    \ 'colorscheme': 'forest_night',
+    \ 'colorscheme': 'gruvbox',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
