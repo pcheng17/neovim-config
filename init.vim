@@ -170,9 +170,9 @@ let NERDTreeMapOpenVSplit='v'
 let NERDTreeMapPreviewVSplit='gv'
 " }}}
 " Ultisnips configurations {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
 " vim-easy-align configurations {{{
 xmap ea <Plug>(EasyAlign)
