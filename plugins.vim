@@ -39,7 +39,7 @@ Plug 'xolox/vim-session'
 Plug 'sheerun/vim-polyglot'
 
 " Ultisnips
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Latex
