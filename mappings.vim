@@ -3,14 +3,14 @@
 " ----------------------------------------------------------------------------
 
 " Shortcuts for saving and quiting
-nmap <Leader>fs :up<CR>
-vmap <Leader>fs <ESC>:up<CR>
-nmap <Leader>sq :up<CR>:q<CR>
-vmap <Leader>sq <ESC>:up<CR>:q<CR>
-nmap <Leader>qq :q<CR>
-vmap <Leader>qq <ESC>:q<CR>
-nmap <Leader>fq :q!<CR>
-vmap <Leader>fq <ESC>:q!<CR>
+nnoremap <Leader>fs :up<CR>
+vnoremap <Leader>fs <ESC>:up<CR>
+nnoremap <Leader>sq :up<CR>:q<CR>
+vnoremap <Leader>sq <ESC>:up<CR>:q<CR>
+nnoremap <Leader>qq :q<CR>
+vnoremap <Leader>qq <ESC>:q<CR>
+nnoremap <Leader>fq :q!<CR>
+vnoremap <Leader>fq <ESC>:q!<CR>
 
 " Shortcut to append this line with the next with a space
 nnoremap U J
@@ -21,18 +21,29 @@ if has('nvim')
     nmap <BS> <C-w>h
     vmap <BS> <C-w>h
 endif
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 " Shortcut for closing buffers using bufkill
-nmap <Leader>kb :BD<CR>
-vmap <Leader>kb <ESC>:BD<CR>
+nnoremap <Leader>kb :BD<CR>
+vnoremap <Leader>kb <ESC>:BD<CR>
 
 " Shortcuts for vertical/horizontal split
-nmap <Leader>vs :vsplit
-nmap <Leader>hs :split
+nnoremap <bar> :vsplit<CR>
+nnoremap _ :split<CR>
+
+" Easier indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Easy new lines
+nnoremap <silent> <M-o> :call append(line('.'), '')<CR>
+nnoremap <silent> <M-O> :call append(line('.')-1, '')<CR>
+
+" Clear highlights
+nnoremap <silent> <ESC> :noh<CR>
 
 " Fast navigation
 nnoremap H 10h
@@ -59,9 +70,6 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
-
-" Turn off highlighting
-noremap <Leader>noh :noh<CR>
 
 " Nerd tree
 noremap <Leader>nt :NERDTreeToggle<CR>
