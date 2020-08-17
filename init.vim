@@ -170,9 +170,9 @@ let NERDTreeMapOpenVSplit='v'
 let NERDTreeMapPreviewVSplit='gv'
 " }}}
 " Ultisnips configurations {{{
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
 " vim-easy-align configurations {{{
 xmap ea <Plug>(EasyAlign)
@@ -195,6 +195,12 @@ let g:rooter_manual_only = 1
 let g:rooter_resolve_links = 1
 let g:rooter_silent_chdir = 1
 " }}}
+" vimtex configurations {{{
+let g:tex_flavor = 'latex'
+let g:vimtex_quickfix_mode = 0
+set conceallevel=1
+let g:tex_conceal = 'abdmg'
+" }}}
 
 "-------------------------------------------------------------------------------
 " Load other specific settings
@@ -204,7 +210,7 @@ source ~/vim-config/mappings.vim
 source ~/vim-config/cpp_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/vim-startify_config.vim
-source ~/vim-config/coc_config.vim
+"source ~/vim-config/coc_config.vim
 
 "-------------------------------------------------------------------------------
 " Autoload files that have changed in neovim
