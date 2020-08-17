@@ -163,6 +163,20 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " EditorConfig configurations {{{
 let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 " }}}
+" C++ configurations {{{
+" Set comment style for C++ files
+augroup cpp_config
+	autocmd!
+    " Set the comment string to be //
+    autocmd FileType c,cpp setlocal commentstring=//\ %s
+    " Continuation of multiline comments
+    " autocmd FileType c,cpp setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/
+    " Disable continuation of single-line comments
+    autocmd FileType c,cpp setlocal comments-=:// comments+=f://
+augroup END
+" Do not indent inside namespace block
+set cino=N-s
+" }}}
 " Nerdtree configurations {{{
 let NERDTreeMapOpenSplit='s'
 let NERDTreeMapPreviewSplit='gs'
@@ -207,7 +221,6 @@ let g:vimtex_quickfix_mode = 0
 "-------------------------------------------------------------------------------
 source ~/vim-config/a.vim
 source ~/vim-config/mappings.vim
-source ~/vim-config/cpp_config.vim
 source ~/vim-config/fzf_config.vim
 source ~/vim-config/vim-startify_config.vim
 "source ~/vim-config/coc_config.vim
