@@ -75,21 +75,26 @@ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
+" Airline settings
+let g:airline_theme = 'gruvbox'
+let g:airline_section_warning = ''
+let g:airline_section_error = ''
+
 " Lightline settings {{{
-let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-    \   'right': [ [ 'lineinfo' ],
-    \              [ 'percent' ],
-    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'FugitiveHead'
-    \ },
-    \ }
-set noshowmode    " Removes the current mode from the bottom-most bar
+"let g:lightline = {
+"    \ 'colorscheme': 'gruvbox',
+"    \ 'active': {
+"    \   'left': [ [ 'mode', 'paste' ],
+"    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+"    \   'right': [ [ 'lineinfo' ],
+"    \              [ 'percent' ],
+"    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+"    \ },
+"    \ 'component_function': {
+"    \   'gitbranch': 'FugitiveHead'
+"    \ },
+"    \ }
+"set noshowmode    " Removes the current mode from the bottom-most bar
 " }}}
 
 " Sessions options
