@@ -182,6 +182,10 @@ augroup END
 " Do not indent inside namespace block
 set cino=N-s
 " }}}
+" Python configuration {{{
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors = 0
+" }}}
 " Nerdtree configurations {{{
 let NERDTreeMapOpenSplit='s'
 let NERDTreeMapPreviewSplit='gs'
