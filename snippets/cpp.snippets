@@ -2,6 +2,15 @@ snippet uns "using namespace" b
 using namespace
 endsnippet
 
+snippet nms "namespace" b
+namespace ${1:foo}
+{
+
+${2}
+
+} // namespace $1
+endsnippet
+
 snippet guard "heard guard" b
 #ifndef ${1:INSERT}_HAS_BEEN_INCLUDED
 #define $1_HAS_BEEN_INCLUDED
