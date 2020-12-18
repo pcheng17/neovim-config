@@ -55,11 +55,6 @@ vnoremap J 10j
 vnoremap K 10k
 vnoremap L 10l
 
-" Save
-imap <C-s> <C-o>:up<CR>
-nmap <C-s> :up<CR>
-vmap <C-s> <ESC>:up<CR>
-
 " Copy to clipboard
 nnoremap <Leader>yy "+yy
 nnoremap <Leader>y$ "+y$
