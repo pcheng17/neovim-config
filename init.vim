@@ -154,16 +154,15 @@ command! SourceConfig source ~/.vimrc
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
 autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
 
-" Remove all trailing whitespace and then return the cursor back to its
-" original location (where it was when this function was invoked).
-function! <SID>StripTrailingWhitespaces()
-    let pos = getpos(".")
-    %s/\s\+$//e
-    call setpos('.', pos)
+" Remove all trailing whitespace
+function! <SID>TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
 endfun
 
 " Remove trailing whitespace before writing
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>TrimWhitespace()
 
 " EditorConfig configurations {{{
 let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
