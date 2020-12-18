@@ -46,14 +46,10 @@ nnoremap <silent> <M-O> :call append(line('.')-1, '')<CR>
 nnoremap <silent> <ESC> :noh<CR>
 
 " Fast navigation
-nnoremap H 10h
 nnoremap J 10j
 nnoremap K 10k
-nnoremap L 10l
-vnoremap H 10h
 vnoremap J 10j
 vnoremap K 10k
-vnoremap L 10l
 
 " Copy to clipboard
 nnoremap <Leader>yy "+yy
