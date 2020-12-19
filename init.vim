@@ -97,9 +97,6 @@ let g:airline_section_error = ''
 "set noshowmode    " Removes the current mode from the bottom-most bar
 " }}}
 
-" Sessions options
-let g:session_autosave = 'no'
-
 "-------------------------------------------------------------------------------
 " Basic settings
 "-------------------------------------------------------------------------------

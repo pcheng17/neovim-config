@@ -35,7 +35,6 @@ Plug 'mhinz/vim-grepper'
 Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdtree'
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
 Plug 'sheerun/vim-polyglot'
 
 " Ultisnips
