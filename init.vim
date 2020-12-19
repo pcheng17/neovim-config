@@ -122,21 +122,34 @@ if has("gui_running")
     set guioptions-=T                   " Remove top tool bar
 endif
 
-set relativenumber                      " Relative line numbers
-set number                              " Current line number
+" Create undo directory
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0700)
+endif
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "", 0770)
+endif
 
-set tabstop=4 shiftwidth=4 expandtab    " Use four spaces for tabs
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
 
-set splitright                          " Horizonital splits will always split to the right
-set splitbelow                          " vertical splits will always split below
-
-set laststatus=2                        " Always display the status bar
-
-set mouse=a                             " Enable mouse
-
-set incsearch                           " Incremental search highlight
-set hlsearch                            " Highlight search patterns
-set cursorline                          " Highlight current line
+set cursorline
+set hlsearch
+set incsearch
+set laststatus=2
+set mouse=a
+set noerrorbells
+set noswapfile
+set nowrap
+set number
+set relativenumber
+set smartcase
+set smartindent
+set splitright
+set splitbelow
+set undodir=~/.vim/undodir
+set undofile
 
 set wildmenu                            " Better menu with completion in command mode
 set wildmode=longest:full,full
