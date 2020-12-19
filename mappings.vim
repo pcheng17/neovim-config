@@ -16,19 +16,10 @@ vnoremap <Leader>fq <ESC>:q!<CR>
 nnoremap U J
 
 " Easy window navigation
-if has('nvim')
-    " Fix <C-h> in neovim
-    nmap <BS> <C-w>h
-    vmap <BS> <C-w>h
-endif
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
-" Shortcut for closing buffers using bufkill
-nnoremap <Leader>kb :BD<CR>
-vnoremap <Leader>kb <ESC>:BD<CR>
+nnoremap <Leader>h :wincmd h<CR>
+nnoremap <Leader>j :wincmd j<CR>
+nnoremap <Leader>k :wincmd k<CR>
+nnoremap <Leader>l :wincmd l<CR>
 
 " Shortcuts for vertical/horizontal split
 nnoremap <bar> :vsplit<CR>
