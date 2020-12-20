@@ -51,11 +51,11 @@ nnoremap <Space> <nop>
 " Aesthetics
 "-----------------------------------------------------------
 " Only set termguicolors if not on Mac
-if (g:Env !~# 'DARWIN')
-	if (has("termguicolors"))
-        set termguicolors
-	end
-end
+" if (g:Env !~# 'DARWIN')
+" 	if (has("termguicolors"))
+"         set termguicolors
+" 	end
+" end
 
 set background=dark
 let g:gruvbox_italic=0
@@ -94,24 +94,6 @@ let g:airline_section_error = ''
 "-------------------------------------------------------------------------------
 " Basic settings
 "-------------------------------------------------------------------------------
-if has("gui_running")
-    if (g:Env =~# 'DARWIN')
-        set lines=50
-        set columns=100
-        set guifont=Consolas:h15
-        " set guifont=Inconsolata:h17
-        " set guifont=Roboto\ Mono:h15
-    elseif (g:Env =~# 'LINUX')
-        set lines=59
-        set columns=110
-        set guifont=Monospace\ 11
-    elseif (g:Env =~# 'WINDOWS')
-        set lines=59
-        set columns=110
-        set guifont=Consolas:h13
-    endif
-    set guioptions-=T                   " Remove top tool bar
-endif
 
 " Create undo directory
 if !isdirectory($HOME."/.vim")
@@ -219,7 +201,6 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <Leader>gs :Git status<CR>
 " }}}
 " vim-grepper configurations {{{
-" Mappings
 nnoremap <Leader>ag :Grepper -tool git<CR>
 nnoremap <Leader>* :Grepper -tool git -cword -noprompt<CR>
 " Search for todo and fixme
@@ -241,15 +222,86 @@ let g:vimtex_view_method = 'SumatraPDF'
 "set conceallevel=1
 "let g:tex_conceal = 'abdmg'
 " }}}
+" fzf configurations {{{
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Fuzzy finder that first checks if we're in a git repo.
+" If so, only git-controlled files will be listed.
+" nnoremap <expr> <Leader>; (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
+" Fuzzy finder on all files in the working directory.
+nnoremap <Leader><space> :Files<CR>
+" Fuzzy finder on all files in the buffer.
+nnoremap <Leader>; :Buffers<CR>
+" }}}
 
 "-------------------------------------------------------------------------------
 " Load other specific settings
 "-------------------------------------------------------------------------------
 source ~/vim-config/a.vim
-source ~/vim-config/mappings.vim
-source ~/vim-config/fzf_config.vim
-source ~/vim-config/vim-startify_config.vim
 "source ~/vim-config/coc_config.vim
+
+"-------------------------------------------------------------------------------
+" Mappings
+"-------------------------------------------------------------------------------
+nmap <Leader>fs :up<CR>
+nmap <Leader>qq :q<CR>
+nmap <Leader>fq :q!<CR>
+nmap <bar> :vsplit<CR>
+nmap _ :split<CR>
+noremap J 10j
+noremap K 10k
+nnoremap <ESC> :noh<CR>
+nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <Leader>h :wincmd h<CR>
+nnoremap <Leader>j :wincmd j<CR>
+nnoremap <Leader>k :wincmd k<CR>
+nnoremap <Leader>l :wincmd l<CR>
+nnoremap <silent> ++ :vertical resize +5<CR>
+nnoremap <silent> -- :vertical resize -5<CR>
+nnoremap <Leader>fd :NERDTreeToggle<CR>
+nnoremap <Leader>ff :NERDTreeFind<CR>
+
+" Shortcut to append this line with the next with a space
+nnoremap U J
+
+" Easier indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Easy new lines
+nnoremap <silent> <M-o> :call append(line('.'), '')<CR>
+nnoremap <silent> <M-O> :call append(line('.')-1, '')<CR>
+
+" Copy to clipboard
+nnoremap <Leader>yy "+yy
+nnoremap <Leader>y$ "+y$
+vnoremap <Leader>y "+y
+
+" Paste from clipboard
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+
+" Menu navigation enhancement (for completeopt)
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+  \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+
+" Iterative word replace via .
+nnoremap c* /\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgn
+nnoremap c# ?\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgN
+
+" Repeat last macro used
+nnoremap Q @@
+
+" Execute the current line as if it's a command
+nnoremap <Leader>e :exe getline(line('.'))<CR>
 
 "-------------------------------------------------------------------------------
 " Autoload files that have changed in neovim
