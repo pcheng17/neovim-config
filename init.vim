@@ -51,11 +51,11 @@ nnoremap <Space> <nop>
 " Aesthetics
 "-----------------------------------------------------------
 " Only set termguicolors if not on Mac
-if (g:Env !~# 'DARWIN')
-	if (has("termguicolors"))
-        set termguicolors
-	end
-end
+" if (g:Env !~# 'DARWIN')
+" 	if (has("termguicolors"))
+"         set termguicolors
+" 	end
+" end
 
 set background=dark
 let g:gruvbox_italic=0
