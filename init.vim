@@ -51,11 +51,11 @@ nnoremap <Space> <nop>
 " Aesthetics
 "-----------------------------------------------------------
 " Only set termguicolors if not on Mac
-" if (g:Env !~# 'DARWIN')
-" 	if (has("termguicolors"))
-"         set termguicolors
-" 	end
-" end
+if (g:Env !~# 'DARWIN')
+	if (has("termguicolors"))
+        set termguicolors
+	end
+end
 
 set background=dark
 let g:gruvbox_italic=0
@@ -64,6 +64,7 @@ let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
 
 " gruvbox related settings
+" nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
 " nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 " nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 " nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
@@ -112,10 +113,12 @@ set incsearch
 set laststatus=2
 set mouse=a
 set noerrorbells
+set noshowmode
 set noswapfile
 set nowrap
 set number
 set relativenumber
+set scrolloff=8
 set smartcase
 set smartindent
 set splitright
@@ -241,7 +244,7 @@ nmap <bar> :vsplit<CR>
 nmap _ :split<CR>
 noremap J 10j
 noremap K 10k
-nnoremap <ESC> :noh<CR>
+nnoremap <silent> <ESC> :noh<CR>
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader>j :wincmd j<CR>
