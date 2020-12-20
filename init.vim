@@ -64,7 +64,6 @@ let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
 
 " gruvbox related settings
-nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
 " nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 " nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 " nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
@@ -133,9 +132,6 @@ set noeb vb t_vb=                       " Disable audio and visual bell
 
 set foldmethod=marker                   " Set folding method
 
-" Source vimrc
-command! SourceConfig source ~/.vimrc
-
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
 autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
@@ -146,8 +142,6 @@ function! <SID>TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-
-" Remove trailing whitespace before writing
 autocmd BufWritePre * :call <SID>TrimWhitespace()
 
 " ag searcher
@@ -227,13 +221,7 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
-
-" Fuzzy finder that first checks if we're in a git repo.
-" If so, only git-controlled files will be listed.
-" nnoremap <expr> <Leader>; (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
-" Fuzzy finder on all files in the working directory.
-nnoremap <Leader><space> :Files<CR>
-" Fuzzy finder on all files in the buffer.
+nnoremap <Leader><space> :GFiles<CR>
 nnoremap <Leader>; :Buffers<CR>
 " }}}
 
@@ -254,15 +242,19 @@ nmap _ :split<CR>
 noremap J 10j
 noremap K 10k
 nnoremap <ESC> :noh<CR>
-nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader>j :wincmd j<CR>
 nnoremap <Leader>k :wincmd k<CR>
 nnoremap <Leader>l :wincmd l<CR>
-nnoremap <silent> ++ :vertical resize +5<CR>
-nnoremap <silent> -- :vertical resize -5<CR>
+nnoremap ++ :vertical resize +5<CR>
+nnoremap -- :vertical resize -5<CR>
 nnoremap <Leader>fd :NERDTreeToggle<CR>
 nnoremap <Leader>ff :NERDTreeFind<CR>
+nnoremap <Leader>gb :GBranches<CR>
+nnoremap <Leader>ga :Git fetch --all<CR>
+nnoremap <Leader>grum :Git rebase upstream/master<CR>
+nnoremap <Leader>grom :Git rebase origin/master<CR>
 
 " Shortcut to append this line with the next with a space
 nnoremap U J
@@ -287,11 +279,11 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
 " Menu navigation enhancement (for completeopt)
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
-  \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+"   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+"   \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
 
 " Iterative word replace via .
 nnoremap c* /\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgn
