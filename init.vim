@@ -57,12 +57,6 @@ if (g:Env !~# 'DARWIN')
 	end
 end
 
-" let g:forest_night_disable_italic_comment = 1
-" colorscheme forest-night
-
-" let g:nord_uniform_diff_background = 1
-" colorscheme nord
-
 set background=dark
 let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
@@ -81,20 +75,20 @@ let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 " Lightline settings {{{
-"let g:lightline = {
-"    \ 'colorscheme': 'gruvbox',
-"    \ 'active': {
-"    \   'left': [ [ 'mode', 'paste' ],
-"    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-"    \   'right': [ [ 'lineinfo' ],
-"    \              [ 'percent' ],
-"    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-"    \ },
-"    \ 'component_function': {
-"    \   'gitbranch': 'FugitiveHead'
-"    \ },
-"    \ }
-"set noshowmode    " Removes the current mode from the bottom-most bar
+" let g:lightline = {
+"     \ 'colorscheme': 'gruvbox',
+"     \ 'active': {
+"     \   'left': [ [ 'mode', 'paste' ],
+"     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+"     \   'right': [ [ 'lineinfo' ],
+"     \              [ 'percent' ],
+"     \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+"     \ },
+"     \ 'component_function': {
+"     \   'gitbranch': 'FugitiveHead'
+"     \ },
+"     \ }
+" set noshowmode    " Removes the current mode from the bottom-most bar
 " }}}
 
 "-------------------------------------------------------------------------------
@@ -173,6 +167,17 @@ endfun
 
 " Remove trailing whitespace before writing
 autocmd BufWritePre * :call <SID>TrimWhitespace()
+
+" ag searcher
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    " Use ag in CtrlP for listing files
+    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    " let g:ctrlp_use_cache
+endif
+
 
 " EditorConfig configurations {{{
 let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
