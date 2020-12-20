@@ -8,19 +8,9 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
-"-----------------------------------------------------------
-" Plugins
-"-----------------------------------------------------------
-source ~/vim-config/plugins.vim
-
-"-----------------------------------------------------------
-" Set runtimepath
-"-----------------------------------------------------------
-set runtimepath+=~/.vim/my-snippets/
-
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
 " Detect operation system and host
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
 function! ConfigSetEnv() abort
     if exists('g:Env')
         return
@@ -41,15 +31,100 @@ function! ConfigSetHost() abort
 endfunction
 call ConfigSetHost()
 
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
+" Set runtimepath
+"-------------------------------------------------------------------------------
+set runtimepath+=~/.vim/my-snippets/
+
+"-------------------------------------------------------------------------------
 " Set leader key
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
 let mapleader="\<SPACE>"
 nnoremap <Space> <nop>
 
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
+" Basic settings
+"-------------------------------------------------------------------------------
+
+" Create undo directory
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0700)
+endif
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "", 0770)
+endif
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set cursorline
+set foldmethod=marker
+set hlsearch
+set incsearch
+set laststatus=2
+set mouse=a
+set noerrorbells
+set noeb vb t_vb=
+set noshowmode
+set noswapfile
+set nowrap
+set number
+set relativenumber
+set scrolloff=8
+set smartcase
+set smartindent
+set splitright
+set splitbelow
+set undodir=~/.vim/undodir
+set undofile
+" set wildmenu                            " Better menu with completion in command mode
+" set wildmode=longest:full,full
+
+"-------------------------------------------------------------------------------
+" Plugins
+"-------------------------------------------------------------------------------
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Colorschemes
+Plug 'pcheng17/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'bfrg/vim-cpp-modern'
+Plug 'qpkorr/vim-bufkill'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mhinz/vim-grepper'
+Plug 'rking/ag.vim'
+Plug 'airblade/vim-rooter'
+Plug 'preservim/nerdtree'
+Plug 'xolox/vim-misc'
+Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'lervag/vimtex'
+Plug 'stephpy/vim-yaml'
+
+call plug#end()
+
+"-------------------------------------------------------------------------------
 " Aesthetics
-"-----------------------------------------------------------
+"-------------------------------------------------------------------------------
 " Only set termguicolors if not on Mac
 " if (g:Env !~# 'DARWIN')
 " 	if (has("termguicolors"))
@@ -74,7 +149,7 @@ let g:airline_theme = 'gruvbox'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
-" Lightline settings {{{
+" Lightline settings
 " let g:lightline = {
 "     \ 'colorscheme': 'gruvbox',
 "     \ 'active': {
@@ -89,51 +164,6 @@ let g:airline_section_error = ''
 "     \ },
 "     \ }
 " set noshowmode    " Removes the current mode from the bottom-most bar
-" }}}
-
-"-------------------------------------------------------------------------------
-" Basic settings
-"-------------------------------------------------------------------------------
-
-" Create undo directory
-if !isdirectory($HOME."/.vim")
-    call mkdir($HOME."/.vim", "", 0700)
-endif
-if !isdirectory($HOME."/.vim/undodir")
-    call mkdir($HOME."/.vim/undodir", "", 0770)
-endif
-
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-
-set cursorline
-set hlsearch
-set incsearch
-set laststatus=2
-set mouse=a
-set noerrorbells
-set noshowmode
-set noswapfile
-set nowrap
-set number
-set relativenumber
-set scrolloff=8
-set smartcase
-set smartindent
-set splitright
-set splitbelow
-set undodir=~/.vim/undodir
-set undofile
-
-set wildmenu                            " Better menu with completion in command mode
-set wildmode=longest:full,full
-
-set completeopt=longest,menuone,preview " Better insert mode completions
-
-set noeb vb t_vb=                       " Disable audio and visual bell
-
-set foldmethod=marker                   " Set folding method
 
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
