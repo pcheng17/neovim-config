@@ -149,22 +149,6 @@ let g:airline_theme = 'gruvbox'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
-" Lightline settings
-" let g:lightline = {
-"     \ 'colorscheme': 'gruvbox',
-"     \ 'active': {
-"     \   'left': [ [ 'mode', 'paste' ],
-"     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-"     \   'right': [ [ 'lineinfo' ],
-"     \              [ 'percent' ],
-"     \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-"     \ },
-"     \ 'component_function': {
-"     \   'gitbranch': 'FugitiveHead'
-"     \ },
-"     \ }
-" set noshowmode    " Removes the current mode from the bottom-most bar
-
 " Disable automatic comment continuation
 autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
 autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
@@ -274,7 +258,7 @@ nmap <bar> :vsplit<CR>
 nmap _ :split<CR>
 noremap J 10j
 noremap K 10k
-nnoremap <silent> <ESC> :noh<CR>
+nnoremap <Leader>n :noh<CR>
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader>j :wincmd j<CR>
