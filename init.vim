@@ -258,6 +258,7 @@ nmap <bar> :vsplit<CR>
 nmap _ :split<CR>
 noremap J 10j
 noremap K 10k
+nnoremap <Leader>re :e!<CR>
 nnoremap <Leader>n :noh<CR>
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>h :wincmd h<CR>
