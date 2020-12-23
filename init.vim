@@ -99,7 +99,6 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -172,9 +171,6 @@ if executable('ag')
 endif
 
 
-" EditorConfig configurations {{{
-let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
-" }}}
 " C++ configurations {{{
 " Set comment style for C++ files
 augroup cpp_config
