@@ -1,35 +1,42 @@
+priority 100
+
 snippet uns "using namespace" b
-using namespace
+using namespace ${1:foo}
+${0}
 endsnippet
 
 snippet nms "namespace" b
 namespace ${1:foo}
 {
 
-${2}
+${VISUAL}$0
 
 } // namespace $1
 endsnippet
 
-snippet guard "heard guard" b
-#ifndef ${1:INSERT}_HAS_BEEN_INCLUDED
+snippet once "header include guard" b
+#ifndef ${1:`!p snip.rv = snip.basename.upper() or "NAME"`}_HAS_BEEN_INCLUDED
 #define $1_HAS_BEEN_INCLUDED
 
-${2}
+${VISUAL}$0
 
 #endif // $1_HAS_BEEN_INCLUDED
 endsnippet
 
-snippet incbr "#include with brackets" b
+snippet ib "#include with brackets" b
 #include <${1:iostream}>
+${0}
 endsnippet
 
-snippet incq "#include with quotes" b
+snippet iq "#include with quotes" b
 #include "${1:file}.h"
+${0}
 endsnippet
 
 snippet sep "separator" b
 // -----------------------------------------------------------------------------
+
+${0}
 endsnippet
 
 snippet mlld "multi-line lambda"
@@ -37,14 +44,52 @@ snippet mlld "multi-line lambda"
 {
 	${4}
 };
+${0}
 endsnippet
 
-snippet cout "cout statement"
+snippet tp "template <typename ...>" b
+template <typename ${1:T}>
+${0}
+endsnippet
+
+snippet cout "cout statement" b
 std::cout << ${1:${VISUAL}} << std::endl;
+${0}
 endsnippet
 
-snippet forsti "for size_t index"
-for (size_t i = ${1:0}; i < ${2}; ++i) {
-    ${3}
+snippet map "std::map" i
+std::map<${1:key}, ${2:value}> ${3:var};
+${0}
+endsnippet
+
+snippet vec "std::vector" i
+std::vector<${1:int}> ${2:var};
+${0}
+endsnippet
+
+snippet set "std::set" i
+std::set<${1:int}> ${2:var};
+${0}
+endsnippet
+
+snippet class "class ..." b
+class ${1:`!p snip.rv = snip.basename or "Foo"`}
+{
+public:
+    ${1/(\w+).*/$1/}();
+private:
+    ${0:// Data}
+};
+endsnippet
+
+snippet fn "function template" b
+${1:void} ${2:functionName}(${3:args})
+{
+    ${0:// Do the thing}
 }
+endsnippet
+
+snippet fnsig "function signature" b
+${1:void} ${2:functionName}(${3:args});
+${0}
 endsnippet
