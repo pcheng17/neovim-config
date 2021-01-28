@@ -29,7 +29,7 @@ ${0}
 endsnippet
 
 snippet iq "#include with quotes" b
-#include "${1:file}.h"
+#include "${1:File}.h"
 ${0}
 endsnippet
 
@@ -40,11 +40,10 @@ ${0}
 endsnippet
 
 snippet mlld "multi-line lambda"
-[${1}](${2}) -> ${3}
+[${1}](${2}) -> ${3:void}
 {
-	${4}
+	${0:// Do the thing}
 };
-${0}
 endsnippet
 
 snippet tp "template <typename ...>" b
@@ -58,17 +57,17 @@ ${0}
 endsnippet
 
 snippet map "std::map" i
-std::map<${1:key}, ${2:value}> ${3:var};
+std::map<${1:KeyType}, ${2:ValueType}> ${3:var};
 ${0}
 endsnippet
 
 snippet vec "std::vector" i
-std::vector<${1:int}> ${2:var};
+std::vector<${1:Type}> ${2:var};
 ${0}
 endsnippet
 
 snippet set "std::set" i
-std::set<${1:int}> ${2:var};
+std::set<${1:Type}> ${2:var};
 ${0}
 endsnippet
 
@@ -83,13 +82,13 @@ private:
 endsnippet
 
 snippet fn "function template" b
-${1:void} ${2:functionName}(${3:args})
+${1:void} ${2:foo}(${3})
 {
-    ${0:// Do the thing}
+    ${0:${VISUAL}}
 }
 endsnippet
 
 snippet fnsig "function signature" b
-${1:void} ${2:functionName}(${3:args});
+${1:void} ${2:foo}(${3});
 ${0}
 endsnippet
