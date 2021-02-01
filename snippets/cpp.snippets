@@ -2,7 +2,6 @@ priority 10
 
 snippet uns "using namespace" b
 using namespace ${1:foo}
-${0}
 endsnippet
 
 snippet nms "namespace" b
@@ -25,43 +24,34 @@ endsnippet
 
 snippet ib "#include with brackets" b
 #include <${1:iostream}>
-${0}
 endsnippet
 
 snippet iq "#include with quotes" b
 #include "${1:File}.h"
-${0}
 endsnippet
 
 snippet sep "separator" b
 // -----------------------------------------------------------------------------
-
-${0}
 endsnippet
 
 snippet tp "template <typename ...>" b
 template <typename ${1:T}>
-${0}
 endsnippet
 
 snippet cout "cout statement" w
 std::cout << ${1:${VISUAL}} << std::endl;
-${0}
 endsnippet
 
 snippet map "std::map" i
 std::map<${1:KeyType}, ${2:ValueType}> ${3:var};
-${0}
 endsnippet
 
 snippet vec "std::vector" i
 std::vector<${1:Type}> ${2:var};
-${0}
 endsnippet
 
 snippet set "std::set" i
 std::set<${1:Type}> ${2:var};
-${0}
 endsnippet
 
 snippet szt "size_t" wA
@@ -87,7 +77,6 @@ endsnippet
 
 snippet fnsig "function signature" b
 ${1:void} ${2:foo}(${3});
-${0}
 endsnippet
 
 snippet if "if statement" b
@@ -112,4 +101,24 @@ endsnippet
 
 snippet neq "not equal to" wA
 !=
+endsnippet
+
+snippet oreq "bitwise OR assignment" wA
+|=
+endsnippet
+
+snippet andeq "bitwise AND assignment" wA
+&=
+endsnippet
+
+snippet xoreq "bitwise XOR assignment" wA
+^=
+endsnippet
+
+snippet lseq "bitwise left shift assignment" wA
+<<=
+endsnippet
+
+snippet rseq "bitwise right shift assignment" wA
+>>=
 endsnippet
