@@ -1,3 +1,9 @@
+global !p
+def code():
+    return vim.eval("synIDattr(synIDtrans(synID(line('.'), col('$')-1, 1)), 'name') =~? 'Comment'") == '0'
+endglobal
+
+
 priority 10
 
 snippet uns "using namespace" b
@@ -91,34 +97,22 @@ else if (${1:true}) {
 }
 endsnippet
 
-snippet leq "less than or equal to" wA
+snippet leq "less than or equal to" w
 <=
 endsnippet
 
-snippet geq "greater thant or equal to" wA
+snippet geq "greater thant or equal to" w
 >=
 endsnippet
 
-snippet neq "not equal to" wA
+snippet neq "not equal to" w
 !=
 endsnippet
 
-snippet oreq "bitwise OR assignment" wA
-|=
+snippet or "logical or" w
+||
 endsnippet
 
-snippet andeq "bitwise AND assignment" wA
-&=
-endsnippet
-
-snippet xoreq "bitwise XOR assignment" wA
-^=
-endsnippet
-
-snippet lseq "bitwise left shift assignment" wA
-<<=
-endsnippet
-
-snippet rseq "bitwise right shift assignment" wA
->>=
+snippet and "logical and" w
+&&
 endsnippet
