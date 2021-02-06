@@ -116,7 +116,7 @@ Plug 'xolox/vim-misc'
 Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'stephpy/vim-yaml'
 
 call plug#end()
@@ -221,11 +221,15 @@ let g:rooter_resolve_links = 1
 let g:rooter_silent_chdir = 1
 " }}}
 " vimtex configurations {{{
-let g:tex_flavor = 'latex'
-let g:vimtex_quickfix_mode = 0
-let g:vimtex_latexmk_continuous = 1
-let g:vimtex_compiler_progname = 'nvr'
-let g:vimtex_view_method = 'SumatraPDF'
+" let g:tex_flavor = 'latex'
+" let g:vimtex_compiler_progname = 'nvr'
+" let g:vimtex_view_method = 'SumatraPDF'
+" let g:vimtex_compiler_latexmk = {
+"     \ 'build_dir' : '',
+"     \ 'callback' : 1,
+"     \ 'continuous' : 1,
+"     \ 'executable' : 'latexmk',
+"     \}
 "set conceallevel=1
 "let g:tex_conceal = 'abdmg'
 " }}}
