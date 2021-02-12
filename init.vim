@@ -149,8 +149,11 @@ let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 " Disable automatic comment continuation
-autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
-autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
+augroup NoContinueComment
+    autocmd!
+    autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
+    autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
+augroup end
 
 " Remove all trailing whitespace
 function! <SID>TrimWhitespace()
@@ -158,7 +161,10 @@ function! <SID>TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-autocmd BufWritePre * :call <SID>TrimWhitespace()
+augroup TrimWhitespace
+    autocmd!
+    autocmd BufWritePre * :call <SID>TrimWhitespace()
+augroup end
 
 " ag searcher
 if executable('ag')
