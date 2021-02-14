@@ -257,6 +257,7 @@ source ~/vim-config/a.vim
 "-------------------------------------------------------------------------------
 " Mappings
 "-------------------------------------------------------------------------------
+nmap <Leader>fs :update<CR>
 nmap <Leader>qq :q<CR>
 nmap <Leader>fq :q!<CR>
 nmap <bar> :vsplit<CR>
