@@ -121,8 +121,16 @@ snippet '(\S.*)\.if' "if (postfix)" r
 if (`!p snip.rv = match.group(1)`)
 endsnippet
 
-snippet '(\S.*);ret' "return (postfix)" r
+snippet '(\S.*).ret' "return (postfix)" r
 return `!p snip.rv = match.group(1)`;
+endsnippet
+
+snippet '(\w+).make_shared' "make_shared (postfix)" ir
+std::make_shared<`!p snip.rv = match.group(1)`>($1);
+endsnippet
+
+snippet '(\w+).make_unique' "make_unique (postfix)" ir
+std::make_unique<`!p snip.rv = match.group(1)`>($1);
 endsnippet
 
 priority 1000
