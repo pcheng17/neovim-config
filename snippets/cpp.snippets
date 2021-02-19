@@ -117,6 +117,14 @@ snippet and "logical and" w
 &&
 endsnippet
 
+snippet '(\S.*)\.if' "if (postfix)" r
+if (`!p snip.rv = match.group(1)`)
+endsnippet
+
+snippet '(\S.*);ret' "return (postfix)" r
+return `!p snip.rv = match.group(1)`;
+endsnippet
+
 priority 1000
 context "code()"
 snippet '([ ]or[ ])' "logical or" rA
