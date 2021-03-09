@@ -96,6 +96,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 
+Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
@@ -136,6 +137,9 @@ let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
+
+" Indent lines for Yggdroot/indentLine
+let g:indentLine_char = '|'
 
 " gruvbox related settings
 " nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
