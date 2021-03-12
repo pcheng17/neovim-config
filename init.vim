@@ -201,9 +201,9 @@ let g:python_highlight_space_errors = 0
 " }}}
 " Nerdtree configurations {{{
 let NERDTreeMapOpenSplit='s'
-let NERDTreeMapPreviewSplit='gs'
+let NERDTreeMapPreviewSplit='ps'
 let NERDTreeMapOpenVSplit='v'
-let NERDTreeMapPreviewVSplit='gv'
+let NERDTreeMapPreviewVSplit='pv'
 " }}}
 " Ultisnips configurations {{{
 let g:UltiSnipsExpandTrigger="<tab>"
