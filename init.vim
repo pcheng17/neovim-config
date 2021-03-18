@@ -195,6 +195,13 @@ augroup END
 " Do not indent inside namespace block
 set cino=N-s
 " }}}
+" Markdown configurations {{{
+augroup md_config
+    autocmd!
+    " Disable concealing from Yggdroot/indentLine
+    let g:indentLine_conceallevel = 0
+augroup END
+" }}}
 " Python configuration {{{
 let g:python_highlight_indent_errors = 0
 let g:python_highlight_space_errors = 0
