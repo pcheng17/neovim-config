@@ -90,7 +90,6 @@ call plug#begin('~/.vim/plugged')
 
 " Colorschemes
 Plug 'pcheng17/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'pcheng17/nord-vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -138,6 +137,8 @@ let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 silent colorscheme gruvbox
+
+" silent colorscheme nord
 
 " Indent lines for Yggdroot/indentLine
 let g:indentLine_char = '|'
