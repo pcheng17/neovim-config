@@ -91,7 +91,7 @@ call plug#begin('~/.vim/plugged')
 " Colorschemes
 Plug 'pcheng17/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'pcheng17/nord-vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
