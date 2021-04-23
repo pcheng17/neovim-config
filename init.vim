@@ -58,6 +58,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+set colorcolumn=100
 set foldmethod=marker
 set hlsearch
 set incsearch
@@ -132,13 +133,13 @@ if (g:Env !~# 'DARWIN')
 	end
 end
 
-set background=dark
-let g:gruvbox_italic=0
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection='0'
-silent colorscheme gruvbox
+" set background=dark
+" let g:gruvbox_italic=0
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_invert_selection='0'
+" silent colorscheme gruvbox
 
-" silent colorscheme nord
+silent colorscheme nord
 
 " Indent lines for Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -150,15 +151,14 @@ let g:indentLine_char = '|'
 " nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " Airline settings
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'nord'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 " Disable automatic comment continuation
-augroup NoContinueComment
+augroup MyFormatOptions
     autocmd!
-    autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
-    autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
+    autocmd BufNewFile,BufRead,FileType * set formatoptions-=tcro
 augroup end
 
 " Remove all trailing whitespace
@@ -188,21 +188,20 @@ endif
 augroup cpp_config
 	autocmd!
     " Set the comment string to be //
-    autocmd FileType c,cpp setlocal commentstring=//\ %s
+    autocmd FileType,BufRead,BufNewFile c,cpp setlocal commentstring=//\ %s
     " Continuation of multiline comments
-    " autocmd FileType c,cpp setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/
+    autocmd FileType,BufRead,BufNewFile c,cpp setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/
     " Disable continuation of single-line comments
-    autocmd FileType c,cpp setlocal comments-=:// comments+=f://
+    autocmd FileType,BufRead,BufNewFile c,cpp setlocal comments-=:// comments+=f://
 augroup END
 " Do not indent inside namespace block
 set cino=N-s
 " }}}
 " Markdown configurations {{{
-augroup md_config
-    autocmd!
-    " Disable concealing from Yggdroot/indentLine
-    let g:indentLine_conceallevel = 0
-augroup END
+" augroup md_config
+"     autocmd!
+"     autocmd FileType,BufRead,BufNewFile markdown setlocal formatoptions=ant
+" augroup END
 " }}}
 " Python configuration {{{
 let g:python_highlight_indent_errors = 0
