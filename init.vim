@@ -198,10 +198,10 @@ augroup END
 set cino=N-s
 " }}}
 " Markdown configurations {{{
-" augroup md_config
-"     autocmd!
-"     autocmd FileType,BufRead,BufNewFile markdown setlocal formatoptions=ant
-" augroup END
+augroup md_config
+    autocmd!
+    autocmd FileType,BufRead,BufNewFile markdown let g:indentLine_conceallevel = 0
+augroup END
 " }}}
 " Python configuration {{{
 let g:python_highlight_indent_errors = 0
